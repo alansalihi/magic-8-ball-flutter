@@ -2,24 +2,31 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-      MaterialApp(
-        home: Scaffold(
-          backgroundColor: Colors.blue,
-          appBar: AppBar(
-            title: Center(child: Text('Ask Me Anything')),
-            backgroundColor: Colors.indigo,
-          ),
-          body: magic8Page(),
-        ),
-      ),
+      BallPage(),
     );
 
-class magic8Page extends StatefulWidget {
+class BallPage extends StatelessWidget {
   @override
-  _magic8PageState createState() => _magic8PageState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: Center(child: Text('Ask Me Anything')),
+          backgroundColor: Colors.grey[700],
+        ),
+        body: Ball(),
+      ),
+    );
+  }
 }
 
-class _magic8PageState extends State<magic8Page> {
+class Ball extends StatefulWidget {
+  @override
+  _BallState createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
   int answer = 1;
 
   @override
